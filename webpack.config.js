@@ -19,14 +19,9 @@ var webpackConfig = {
 		],
 		module: {
 			loaders: [
-				{ test: /\.jsx?$/, loaders: ['babel-loader'], exclude: /(node_modules|bower_components)/ },
-				{ test: /\.css$/, loader: 'style!css', exclude: /node_modules/ },
+				{ test: /\.jsx?$/, loaders: ['babel-loader'], exclude: /node_modules/ },
 				{ test: /\.coffee$/, loader: 'coffee-loader', exclude: /node_modules/ },
 				{ test: /\.cjsx$/, loaders: ['coffee', 'cjsx'], exclude: /node_modules/ },
-				{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-				{ test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=25000" },
-				{ test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-				{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
 			]
 		},
 		resolve: {
